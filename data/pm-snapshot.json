@@ -1,0 +1,55 @@
+{
+  "source": "pm-raven-dubgub + cohort platform public stats",
+  "pmPlatformUrl": "https://pm-raven-dubgub.vercel.app",
+  "commsPlatformUrl": "https://comms-raven-dubgub.vercel.app",
+  "forthWinnerUrl": "https://forth-bice.vercel.app",
+  "cohortPlatformUrl": "https://site-nine-rouge-68.vercel.app",
+  "updatedAt": "2026-07-30T13:00:00.000Z",
+  "note": "Static daily snapshot for hiring-partner read-only status. Live cohort counts refresh from /api/cohort/stats when available.",
+  "projects": [
+    {
+      "slug": "phase-1-project-1",
+      "title": "Project management platform",
+      "status": "Contest complete — Forth (CodingWCal) operating winner",
+      "submissionsWithDeploy": 22,
+      "operatorUrl": "https://forth-bice.vercel.app"
+    },
+    {
+      "slug": "phase-1-project-2",
+      "title": "Internal communications platform",
+      "status": "Review / vote window — production deploys live",
+      "submissionsWithDeploy": 15,
+      "sampleUrl": "https://comms-raven-dubgub.vercel.app"
+    },
+    {
+      "slug": "phase-1-project-3",
+      "title": "Vibe marketing / public showcase",
+      "status": "Submission window open through Sun 17:00 ET",
+      "submissionsWithDeploy": 1,
+      "sampleUrl": "https://showcase-raven-dubgub.vercel.app"
+    }
+  ],
+  "highlights": [
+    {
+      "handle": "raven-dubgub",
+      "label": "PM + Comms + Showcase stack",
+      "urls": [
+        "https://pm-raven-dubgub.vercel.app",
+        "https://comms-raven-dubgub.vercel.app"
+      ]
+    },
+    {
+      "handle": "CodingWCal",
+      "label": "Forth PM winner",
+      "urls": ["https://forth-bice.vercel.app"]
+    },
+    {
+      "handle": "gge513",
+      "label": "Whose Ball + Tavern",
+      "urls": [
+        "https://whose-ball.vercel.app",
+        "https://tavern-cohort.vercel.app"
+      ]
+    }
+  ]
+}

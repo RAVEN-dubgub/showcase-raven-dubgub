@@ -1,0 +1,556 @@
+{
+  "cohortId": "summer26",
+  "cohortName": "Hult Cohort Developer Program",
+  "term": "Summer 2026 Pilot",
+  "updatedAt": "2026-07-30T13:09:59.575Z",
+  "participants": [
+    {
+      "handle": "raven-dubgub",
+      "displayName": "Joshua Scotland",
+      "campus": "Boston",
+      "skills": [
+        "TypeScript",
+        "Next.js",
+        "Postgres",
+        "Vercel"
+      ],
+      "bio": "Cohort builder shipping production PM, comms, and showcase surfaces. Focused on hiring-partner credibility and unification-ready APIs.",
+      "pmUrl": "https://pm-raven-dubgub.vercel.app",
+      "commsUrl": "https://comms-raven-dubgub.vercel.app",
+      "pmRepo": "https://github.com/RAVEN-dubgub/pm-RAVEN-dubgub",
+      "commsRepo": "https://github.com/RAVEN-dubgub/comms-raven-dubgub",
+      "showcaseUrl": "https://showcase-raven-dubgub.vercel.app",
+      "showcaseRepo": "https://github.com/RAVEN-dubgub/showcase-raven-dubgub",
+      "optIn": true
+    },
+    {
+      "handle": "CodingWCal",
+      "displayName": "CodingWCal",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "Forth"
+      ],
+      "bio": "Builder behind Forth — the cohort PM contest winner used for day-to-day project operations.",
+      "pmUrl": "https://forth-bice.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "gge513",
+      "displayName": "gge513",
+      "campus": "Boston",
+      "skills": [
+        "Next.js",
+        "Product"
+      ],
+      "bio": "Shipped Whose Ball (PM) and Tavern (comms) — playful product surfaces with real deploy evidence.",
+      "pmUrl": "https://whose-ball.vercel.app",
+      "commsUrl": "https://tavern-cohort.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "priyanshshahh",
+      "displayName": "Priyansh Shah",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "Comms"
+      ],
+      "bio": "Keel PM and Cohort Comms Phi — clean production deploys for Phase 1 contests.",
+      "pmUrl": "https://keel-pm.vercel.app",
+      "commsUrl": "https://cohort-comms-phi.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "artira",
+      "displayName": "Artira",
+      "campus": "Boston",
+      "skills": [
+        "Azure",
+        "Next.js"
+      ],
+      "bio": "PM on Azure/Vercel and Cohort Comms Rho — multi-cloud comfort with peer-reviewed builds.",
+      "pmUrl": "https://pm-artira-azure.vercel.app",
+      "commsUrl": "https://cohort-comms-rho.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "lvcasmadeit",
+      "displayName": "Lucas",
+      "campus": "Boston",
+      "skills": [
+        "Mast",
+        "Teamwrk"
+      ],
+      "bio": "Mast PM and Teamwrk comms — shipping tools teammates can actually open.",
+      "pmUrl": "https://mast-six.vercel.app",
+      "commsUrl": "https://teamwrk-gamma.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "zukhriddingit",
+      "displayName": "Zukhriddin",
+      "campus": "Boston",
+      "skills": [
+        "Momentum",
+        "PM"
+      ],
+      "bio": "Momentum Bay PM platform — evidence-first portfolio for hiring partners.",
+      "pmUrl": "https://momentum-bay-two.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "godwinkamau",
+      "displayName": "Godwin Kamau",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "Integration"
+      ],
+      "bio": "Hult Cohort PM project with Forth deep-link awareness on later builds.",
+      "pmUrl": "https://hult-cohort-pm-project.vercel.app",
+      "commsUrl": "https://forth-bice.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "joes9987",
+      "displayName": "Joe",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "Comms"
+      ],
+      "bio": "Paired PM + Comms deploys under the joes9987 namespace.",
+      "pmUrl": "https://pm-joes9987.vercel.app",
+      "commsUrl": "https://comms-joes9987.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "kperpignant",
+      "displayName": "K. Perpignant",
+      "campus": "Boston",
+      "skills": [
+        "Nidora",
+        "Buddywire"
+      ],
+      "bio": "Nidora PM and Buddywire comms — clear production trail for employers.",
+      "pmUrl": "https://nidora-one.vercel.app",
+      "commsUrl": "https://buddywire.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "kureen-cyber",
+      "displayName": "Kureen",
+      "campus": "Boston",
+      "skills": [
+        "Security",
+        "Comms"
+      ],
+      "bio": "PM tool + Banter comms — security-minded builder with live HTTPS evidence.",
+      "pmUrl": "https://pm-tool-hult-cohort-4.vercel.app",
+      "commsUrl": "https://banter-kureen-cyber.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "ramyatolety",
+      "displayName": "Ramya Tolety",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "Beacon"
+      ],
+      "bio": "Dedicated PM and Beacon comms deploys.",
+      "pmUrl": "https://pm-ramyatolety.vercel.app",
+      "commsUrl": "https://beacon-ramyatolety.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "r3s0lv343vr",
+      "displayName": "r3s0lv343vr",
+      "campus": "Boston",
+      "skills": [
+        "PM",
+        "LNQ"
+      ],
+      "bio": "PM platform and LNQ comms with peer-reviewable repos.",
+      "pmUrl": "https://pm-r3s0lv343vr.vercel.app",
+      "commsUrl": "https://lnq-eight.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "arjun-singh2127",
+      "displayName": "Arjun Singh",
+      "campus": "Boston",
+      "skills": [
+        "Helm",
+        "Comms"
+      ],
+      "bio": "Helm web PM and dedicated comms deploy.",
+      "pmUrl": "https://helm-web-neon.vercel.app",
+      "commsUrl": "https://comms-arjun-singh2127.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "divyaprakash04",
+      "displayName": "Divya Prakash",
+      "campus": "Boston",
+      "skills": [
+        "Velocity",
+        "PM"
+      ],
+      "bio": "OurVelocity PM — shipping for cohort velocity tracking.",
+      "pmUrl": "https://ourvelocity.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "supercuda",
+      "displayName": "SuperCUDA",
+      "campus": "Boston",
+      "skills": [
+        "Mergeboard"
+      ],
+      "bio": "Mergeboard PM — collaboration-first project surface.",
+      "pmUrl": "https://mergeboard.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "frankgomezdev",
+      "displayName": "Frank Gomez",
+      "campus": "Boston",
+      "skills": [
+        "PM"
+      ],
+      "bio": "Named PM deploy with public GitHub contribution trail.",
+      "pmUrl": "https://pm-frankgomezdev.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "celiciakitty-creator",
+      "displayName": "Celicia",
+      "campus": "Boston",
+      "skills": [
+        "Anovia"
+      ],
+      "bio": "Anovia PM platform — production HTTPS for Phase 1.",
+      "pmUrl": "https://anovia.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "mitchelldante99-create",
+      "displayName": "Mitchell Dante",
+      "campus": "Boston",
+      "skills": [
+        "PM"
+      ],
+      "bio": "PM tool deploy for Phase 1 contest week.",
+      "pmUrl": "https://pm-tool-eight-psi.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "studmuffin01",
+      "displayName": "Studmuffin01",
+      "campus": "Boston",
+      "skills": [
+        "Initiara"
+      ],
+      "bio": "Initiara PM surface on Vercel.",
+      "pmUrl": "https://initiara-nu8pzufah-rawle.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "paramjeet-singh-neu",
+      "displayName": "Paramjeet Singh",
+      "campus": "Boston",
+      "skills": [
+        "ShipVote"
+      ],
+      "bio": "Ship Vote PM — voting and shipping in one surface.",
+      "pmUrl": "https://ship-vote-rosy.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "jiaxinaspenlin-dotcom",
+      "displayName": "Jiaxin Aspen Lin",
+      "campus": "Boston",
+      "skills": [
+        "GrowSprout"
+      ],
+      "bio": "Grow Sprout PM — product-minded Phase 1 build.",
+      "pmUrl": "https://grow-sprout-liart.vercel.app",
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "jj-javascript",
+      "displayName": "JJ",
+      "campus": "Boston",
+      "skills": [
+        "Archivist",
+        "Comms"
+      ],
+      "bio": "Archivist comms platform — async-first cohort chat.",
+      "pmUrl": null,
+      "commsUrl": "https://archivist-blue.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "solzco1",
+      "displayName": "Solzco",
+      "campus": "Boston",
+      "skills": [
+        "Forth",
+        "Integration"
+      ],
+      "bio": "Integrating with Forth winner stack for PM operations.",
+      "pmUrl": null,
+      "commsUrl": "https://forth-bice.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "rogersuperbuilderalpha",
+      "displayName": "Roger (Program)",
+      "campus": "Boston",
+      "skills": [
+        "Platform",
+        "Curriculum"
+      ],
+      "bio": "Program director / platform author. Cohort marketing site is the live north star.",
+      "pmUrl": null,
+      "commsUrl": "https://site-nine-rouge-68.vercel.app",
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": "https://site-nine-rouge-68.vercel.app",
+      "showcaseRepo": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program",
+      "optIn": true
+    },
+    {
+      "handle": "alaskalam",
+      "displayName": "Alaska Lam",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "jayyyw34",
+      "displayName": "Jay",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "josie-ctrl",
+      "displayName": "Josie",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "kiaracaesar5627",
+      "displayName": "Kiara Caesar",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "lorra-v",
+      "displayName": "Lorra V",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "nikjain15",
+      "displayName": "Nik Jain",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "rebekah-dev",
+      "displayName": "Rebekah",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    },
+    {
+      "handle": "anushavissapragada23",
+      "displayName": "Anusha Vissapragada",
+      "campus": "Boston",
+      "skills": [
+        "Cohort"
+      ],
+      "bio": "Enrolled participant — inspect GitHub for latest merged PRs and reviews.",
+      "pmUrl": null,
+      "commsUrl": null,
+      "pmRepo": null,
+      "commsRepo": null,
+      "showcaseUrl": null,
+      "showcaseRepo": null,
+      "optIn": true
+    }
+  ]
+}
