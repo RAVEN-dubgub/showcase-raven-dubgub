@@ -40,16 +40,16 @@ export default async function StudentsPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl">Students</h1>
-      <p className="mt-3 max-w-2xl text-[var(--ink-soft)]">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-50">Students</h1>
+      <p className="mt-3 max-w-2xl text-slate-300">
         {all.length} public profile pages from submission + PR evidence. Opt-outs show as
         private. Filter by skill or search handles. Prefer the{" "}
-        <Link href="/work" className="font-semibold text-[var(--magenta)] hover:underline">
+        <Link href="/work" className="font-semibold holo-text-link hover:underline">
           work index
         </Link>{" "}
         for a single week · project · live URL table.
       </p>
-      <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] text-[var(--ink-soft)]">
+      <p className="mt-2 jarvis-metric-label">
         Roster evidence as of{" "}
         {new Date(rosterUpdated).toLocaleDateString("en-US", {
           year: "numeric",
@@ -63,12 +63,12 @@ export default async function StudentsPage({
           name="q"
           defaultValue={sp.q ?? ""}
           placeholder="Search name, handle, bio…"
-          className="min-w-[220px] flex-1 rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm"
+          className="holo-input min-w-[220px] flex-1 px-4 py-2 text-sm"
         />
         <select
           name="skill"
           defaultValue={sp.skill ?? ""}
-          className="rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm"
+          className="holo-input px-4 py-2 text-sm"
         >
           <option value="">All skills</option>
           {skillSet.map((s) => (
@@ -77,10 +77,7 @@ export default async function StudentsPage({
             </option>
           ))}
         </select>
-        <button
-          type="submit"
-          className="rounded-full bg-[var(--ink)] px-4 py-2 text-sm font-semibold text-[var(--cream)]"
-        >
+        <button type="submit" className="holo-btn-ghost px-4 py-2 text-sm">
           Filter
         </button>
       </form>
@@ -92,7 +89,7 @@ export default async function StudentsPage({
             <Link
               key={p.handle}
               href={`/students/${p.handle}`}
-              className="rounded-2xl border border-[var(--line)] bg-white/65 p-4 hover:border-[var(--magenta)]/35 transition"
+              className="holo-card p-4"
             >
               <div className="flex items-center gap-3">
                 {!isPrivate ? (
@@ -102,38 +99,37 @@ export default async function StudentsPage({
                     alt=""
                     width={44}
                     height={44}
-                    className="h-11 w-11 rounded-full border border-[var(--line)] bg-[var(--cream-deep)] object-cover"
+                    className="h-11 w-11 rounded-full border border-cyan-400/25 bg-slate-900 object-cover"
                   />
                 ) : (
-                  <div className="h-11 w-11 rounded-full border border-[var(--line)] bg-[var(--cream-deep)]" />
+                  <div className="h-11 w-11 rounded-full border border-cyan-400/20 bg-slate-900" />
                 )}
                 <div>
-                  <p className="font-semibold">
+                  <p className="font-semibold text-slate-100">
                     {isPrivate ? "Private profile" : p.displayName}
                   </p>
-                  <p className="text-sm text-[var(--ink-soft)]">@{p.handle}</p>
+                  <p className="text-sm text-slate-400">@{p.handle}</p>
                 </div>
               </div>
               {!isPrivate && (
                 <>
-                  <p className="mt-3 line-clamp-2 text-sm text-[var(--ink-soft)]">{p.bio}</p>
+                  <p className="mt-3 line-clamp-2 text-sm text-slate-400">{p.bio}</p>
                   {(() => {
                     const deploys = deployEvidence(p);
                     return deploys.count > 0 ? (
-                      <p className="mt-2 text-xs font-semibold text-[var(--sage)]">
+                      <p className="mt-2 text-xs font-semibold text-cyan-300">
                         {deploys.count} live deploy{deploys.count === 1 ? "" : "s"} ·{" "}
                         {deploys.labels.join(" · ")}
                       </p>
                     ) : (
-                      <p className="mt-2 text-xs text-[var(--ink-soft)]">No public deploy URL yet</p>
+                      <p className="mt-2 text-xs text-slate-500">
+                        No public deploy URL yet
+                      </p>
                     );
                   })()}
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {p.skills.slice(0, 4).map((s) => (
-                      <span
-                        key={s}
-                        className="rounded-full bg-[var(--sage-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--sage)]"
-                      >
+                      <span key={s} className="holo-pill">
                         {s}
                       </span>
                     ))}
@@ -141,7 +137,7 @@ export default async function StudentsPage({
                 </>
               )}
               {isPrivate && (
-                <p className="mt-3 text-sm text-[var(--ink-soft)]">
+                <p className="mt-3 text-sm text-slate-400">
                   This student opted out of public marketing.
                 </p>
               )}

@@ -48,17 +48,15 @@ export default async function StudentProfilePage({ params }: Props) {
   if (isPrivate) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--ink-soft)]">
-          Privacy
-        </p>
-        <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl">
+        <p className="jarvis-metric-label">Privacy</p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-50">
           @{p.handle} is private
         </h1>
-        <p className="mt-4 text-[var(--ink-soft)]">
+        <p className="mt-4 text-slate-300">
           This participant opted out of the public marketing showcase. Contact the
           placement lead if you have an active hiring conversation already in progress.
         </p>
-        <Link href="/students" className="mt-8 inline-block font-semibold text-[var(--magenta)]">
+        <Link href="/students" className="mt-8 inline-block font-semibold holo-text-link">
           ← Back to students
         </Link>
       </div>
@@ -78,42 +76,39 @@ export default async function StudentProfilePage({ params }: Props) {
               alt=""
               width={96}
               height={96}
-              className="h-24 w-24 rounded-full border border-[var(--line)] bg-[var(--cream-deep)]"
+              className="h-24 w-24 rounded-full border border-cyan-400/30 bg-slate-900"
             />
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--magenta)]">
+              <p className="jarvis-status-line">
                 {p.campus} · {siteConfig.term}
               </p>
-              <h1 className="mt-1 font-[family-name:var(--font-display)] text-4xl">
+              <h1 className="mt-1 text-4xl font-bold tracking-tight text-slate-50">
                 {p.displayName}
               </h1>
               <a
                 href={githubUrl(p.handle)}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-1 inline-block font-semibold text-[var(--ink-soft)] hover:text-[var(--magenta)]"
+                className="mt-1 inline-block font-semibold text-slate-400 hover:text-cyan-300"
               >
                 @{p.handle} on GitHub →
               </a>
             </div>
           </div>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--ink-soft)]">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
             {p.bio}
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
             {p.skills.map((s) => (
-              <span
-                key={s}
-                className="rounded-full bg-[var(--sage-soft)] px-3 py-1 text-xs font-semibold text-[var(--sage)]"
-              >
+              <span key={s} className="holo-pill">
                 {s}
               </span>
             ))}
           </div>
 
-          <h2 className="mt-10 font-[family-name:var(--font-display)] text-2xl">
+          <h2 className="mt-10 text-2xl font-semibold text-slate-50">
             Portfolio evidence
           </h2>
           <ul className="mt-4 space-y-2">
@@ -123,7 +118,7 @@ export default async function StudentProfilePage({ params }: Props) {
                   href={l.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-semibold text-[var(--magenta)] hover:underline"
+                  className="font-semibold holo-text-link hover:underline"
                 >
                   {l.label}: {l.href}
                 </a>
@@ -131,19 +126,29 @@ export default async function StudentProfilePage({ params }: Props) {
             ))}
           </ul>
 
-          <div className="mt-8 rounded-2xl border border-[var(--line)] bg-white/60 p-4 text-sm text-[var(--ink-soft)]">
-            <p className="font-semibold text-[var(--ink)]">PM integration</p>
+          <div className="holo-panel mt-8 p-4 text-sm text-slate-400">
+            <p className="font-semibold text-slate-100">PM integration</p>
             <p className="mt-1">
               Cohort project status snapshot:{" "}
-              <Link href="/status" className="text-[var(--magenta)] hover:underline">
+              <Link href="/status" className="holo-text-link hover:underline">
                 /status
               </Link>
               . Author PM:{" "}
-              <a href={siteConfig.pmUrl} target="_blank" rel="noreferrer" className="underline">
+              <a
+                href={siteConfig.pmUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
                 {siteConfig.pmUrl}
               </a>
               . Operating winner Forth:{" "}
-              <a href={siteConfig.forthUrl} target="_blank" rel="noreferrer" className="underline">
+              <a
+                href={siteConfig.forthUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
                 {siteConfig.forthUrl}
               </a>
               .
@@ -151,17 +156,16 @@ export default async function StudentProfilePage({ params }: Props) {
           </div>
         </div>
 
-        <aside
-          id="request-intro"
-          className="rounded-2xl border border-[var(--line)] bg-white/70 p-5 shadow-sm"
-        >
-          <h2 className="font-[family-name:var(--font-display)] text-2xl">Request intro</h2>
-          <p className="mt-2 text-sm text-[var(--ink-soft)]">
+        <aside id="request-intro" className="jarvis-panel p-5">
+          <h2 className="relative z-[1] text-2xl font-semibold text-slate-50">
+            Request intro
+          </h2>
+          <p className="relative z-[1] mt-2 text-sm text-slate-400">
             Placement lead is emailed within about a minute when Resend or SMTP is
             configured; you also get a short confirmation. Otherwise it is queued in the
             showcase database.
           </p>
-          <div className="mt-4">
+          <div className="relative z-[1] mt-4">
             <IntroForm defaultStudents={p.handle} />
           </div>
         </aside>

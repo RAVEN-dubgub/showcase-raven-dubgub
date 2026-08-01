@@ -33,56 +33,56 @@ export function RsvpForm() {
   return (
     <form onSubmit={onSubmit} className="grid gap-3">
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Name
           <input
             name="name"
             required
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Email
           <input
             name="email"
             type="email"
             required
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Company
           <input
             name="company"
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Role
           <input
             name="role"
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
       </div>
       <button
         type="submit"
         disabled={status === "loading"}
-        className="justify-self-start rounded-full bg-[var(--sage)] px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-60"
+        className="holo-btn-primary justify-self-start px-5 py-2.5 text-sm"
       >
         {status === "loading" ? "Saving…" : "RSVP for showcase"}
       </button>
       {status === "ok" && (
-        <p className="text-sm font-medium text-[var(--sage)]">
+        <p className="text-sm font-medium text-emerald-300">
           {notified
-            ? "You\u2019re on the list — confirmation email sent."
-            : "You\u2019re on the list — we saved your RSVP."}
+            ? "You’re on the list — confirmation email sent."
+            : "You’re on the list — we saved your RSVP."}
         </p>
       )}
       {status === "err" && (
-        <p className="text-sm font-medium text-[var(--magenta)]">{error}</p>
+        <p className="text-sm font-medium text-rose-300">{error}</p>
       )}
     </form>
   );

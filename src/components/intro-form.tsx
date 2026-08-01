@@ -38,68 +38,68 @@ export function IntroForm({ defaultStudents = "" }: Props) {
   return (
     <form onSubmit={onSubmit} className="grid gap-3">
       <div className="grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Partner name
           <input
             name="partnerName"
             required
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
-        <label className="grid gap-1 text-sm font-semibold">
+        <label className="grid gap-1 text-sm font-semibold text-slate-200">
           Company
           <input
             name="company"
             required
-            className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+            className="holo-input px-3 py-2 font-normal"
           />
         </label>
       </div>
-      <label className="grid gap-1 text-sm font-semibold">
+      <label className="grid gap-1 text-sm font-semibold text-slate-200">
         Work email
         <input
           name="email"
           type="email"
           required
-          className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+          className="holo-input px-3 py-2 font-normal"
         />
       </label>
-      <label className="grid gap-1 text-sm font-semibold">
+      <label className="grid gap-1 text-sm font-semibold text-slate-200">
         Student handle(s)
         <input
           name="studentHandles"
           required
           defaultValue={defaultStudents}
           placeholder="raven-dubgub, gge513"
-          className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+          className="holo-input px-3 py-2 font-normal"
         />
       </label>
-      <label className="grid gap-1 text-sm font-semibold">
+      <label className="grid gap-1 text-sm font-semibold text-slate-200">
         Message
         <textarea
           name="message"
           required
           rows={4}
-          className="rounded-lg border border-[var(--line)] bg-white/80 px-3 py-2 font-normal"
+          className="holo-input px-3 py-2 font-normal"
           placeholder="Roles, timeline, and what you want to evaluate on GitHub."
         />
       </label>
       <button
         type="submit"
         disabled={status === "loading"}
-        className="justify-self-start rounded-full bg-[var(--magenta)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--magenta-dark)] disabled:opacity-60"
+        className="holo-btn-primary justify-self-start px-5 py-2.5 text-sm"
       >
         {status === "loading" ? "Sending…" : "Request intro"}
       </button>
       {status === "ok" && (
-        <p className="text-sm font-medium text-[var(--sage)]">
+        <p className="text-sm font-medium text-emerald-300">
           {notified
             ? "Received — placement lead notified by email. Check your inbox for confirmation."
             : "Received and saved — we will follow up within 24 hours."}
         </p>
       )}
       {status === "err" && (
-        <p className="text-sm font-medium text-[var(--magenta)]">{error}</p>
+        <p className="text-sm font-medium text-rose-300">{error}</p>
       )}
     </form>
   );

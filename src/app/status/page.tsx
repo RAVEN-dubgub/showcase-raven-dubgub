@@ -29,42 +29,41 @@ export default async function StatusPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-50">
         Cohort PM status
       </h1>
-      <p className="mt-3 max-w-2xl text-[var(--ink-soft)]">
+      <p className="mt-3 max-w-2xl text-slate-300">
         Read-only hiring-partner view of project status. Snapshot sourced from{" "}
-        <a href={snapshot.pmPlatformUrl} className="text-[var(--magenta)] underline" target="_blank" rel="noreferrer">
+        <a
+          href={snapshot.pmPlatformUrl}
+          className="holo-text-link underline"
+          target="_blank"
+          rel="noreferrer"
+        >
           pm-raven-dubgub
         </a>
         , Forth winner ops, and live cohort stats — not lorem ipsum.
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-2xl border border-[var(--line)] bg-white/65 p-4">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--ink-soft)]">
-            Enrolled (live)
-          </p>
-          <p className="mt-2 text-3xl font-semibold">
+        <div className="jarvis-panel p-4">
+          <p className="jarvis-metric-label relative z-[1]">Enrolled (live)</p>
+          <p className="jarvis-metric-glow relative z-[1] mt-2">
             {live?.enrolledCount ?? "—"}
           </p>
-          <p className="text-sm text-[var(--ink-soft)]">
+          <p className="relative z-[1] text-sm text-slate-400">
             cohort {live?.cohortId ?? siteConfig.cohortId}
           </p>
         </div>
-        <div className="rounded-2xl border border-[var(--line)] bg-white/65 p-4">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--ink-soft)]">
-            Peer reviews each
-          </p>
-          <p className="mt-2 text-3xl font-semibold">
+        <div className="jarvis-panel p-4">
+          <p className="jarvis-metric-label relative z-[1]">Peer reviews each</p>
+          <p className="jarvis-metric-glow relative z-[1] mt-2">
             {live?.peerReviewCount ?? "—"}
           </p>
         </div>
-        <div className="rounded-2xl border border-[var(--line)] bg-white/65 p-4">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--ink-soft)]">
-            Snapshot updated
-          </p>
-          <p className="mt-2 text-lg font-semibold">
+        <div className="jarvis-panel p-4">
+          <p className="jarvis-metric-label relative z-[1]">Snapshot updated</p>
+          <p className="relative z-[1] mt-2 text-lg font-semibold text-slate-100">
             {new Date(snapshot.updatedAt).toLocaleString("en-US", {
               timeZone: "America/New_York",
             })}{" "}
@@ -73,32 +72,42 @@ export default async function StatusPage() {
         </div>
       </div>
 
-      <h2 className="mt-10 font-[family-name:var(--font-display)] text-2xl">
-        Phase 1 projects
-      </h2>
-      <div className="mt-4 overflow-x-auto rounded-2xl border border-[var(--line)] bg-white/70">
-        <table className="min-w-full text-left text-sm">
-          <thead className="border-b border-[var(--line)] bg-[var(--cream-deep)]/60 text-xs uppercase tracking-wide text-[var(--ink-soft)]">
+      <h2 className="mt-10 text-2xl font-semibold text-slate-50">Phase 1 projects</h2>
+      <div className="holo-table-wrap mt-4">
+        <table className="holo-table">
+          <thead>
             <tr>
-              <th className="px-4 py-3">Project</th>
-              <th className="px-4 py-3">Status</th>
-              <th className="px-4 py-3">Deploy evidence</th>
-              <th className="px-4 py-3">Link</th>
+              <th>Project</th>
+              <th>Status</th>
+              <th>Deploy evidence</th>
+              <th>Link</th>
             </tr>
           </thead>
           <tbody>
             {snapshot.projects.map((p) => (
-              <tr key={p.slug} className="border-b border-[var(--line)] last:border-0">
-                <td className="px-4 py-3 font-semibold">{p.title}</td>
-                <td className="px-4 py-3 text-[var(--ink-soft)]">{p.status}</td>
-                <td className="px-4 py-3">{p.submissionsWithDeploy} public URLs</td>
-                <td className="px-4 py-3">
+              <tr key={p.slug}>
+                <td className="font-semibold text-slate-100">{p.title}</td>
+                <td className="text-slate-300">{p.status}</td>
+                <td className="text-slate-300">
+                  {p.submissionsWithDeploy} public URLs
+                </td>
+                <td>
                   {"operatorUrl" in p && p.operatorUrl ? (
-                    <a href={p.operatorUrl} className="text-[var(--magenta)] underline" target="_blank" rel="noreferrer">
+                    <a
+                      href={p.operatorUrl}
+                      className="holo-text-link underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Operator
                     </a>
                   ) : "sampleUrl" in p && p.sampleUrl ? (
-                    <a href={p.sampleUrl} className="text-[var(--magenta)] underline" target="_blank" rel="noreferrer">
+                    <a
+                      href={p.sampleUrl}
+                      className="holo-text-link underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Sample
                     </a>
                   ) : (
@@ -111,21 +120,18 @@ export default async function StatusPage() {
         </table>
       </div>
 
-      <h2 className="mt-10 font-[family-name:var(--font-display)] text-2xl">Highlights</h2>
+      <h2 className="mt-10 text-2xl font-semibold text-slate-50">Highlights</h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-3">
         {snapshot.highlights.map((h) => (
-          <li
-            key={h.handle}
-            className="rounded-2xl border border-[var(--line)] bg-white/65 p-4"
-          >
+          <li key={h.handle} className="holo-card p-4">
             <Link
               href={`/students/${h.handle}`}
-              className="font-semibold text-[var(--magenta)] hover:underline"
+              className="font-semibold holo-text-link hover:underline"
             >
               @{h.handle}
             </Link>
-            <p className="mt-1 text-sm text-[var(--ink-soft)]">{h.label}</p>
-            <ul className="mt-2 space-y-1 text-xs break-all">
+            <p className="mt-1 text-sm text-slate-400">{h.label}</p>
+            <ul className="mt-2 space-y-1 text-xs break-all text-slate-400">
               {h.urls.map((u) => (
                 <li key={u}>
                   <a href={u} target="_blank" rel="noreferrer" className="underline">
@@ -138,13 +144,16 @@ export default async function StatusPage() {
         ))}
       </ul>
 
-      <p className="mt-8 text-sm text-[var(--ink-soft)]">
+      <p className="mt-8 text-sm text-slate-400">
         JSON feed:{" "}
-        <Link href="/api/pm-status" className="font-semibold text-[var(--magenta)]">
+        <Link href="/api/pm-status" className="font-semibold holo-text-link">
           /api/pm-status
         </Link>
         . Refresh snapshot daily via{" "}
-        <code className="rounded bg-black/5 px-1">data/pm-snapshot.json</code>.
+        <code className="rounded bg-cyan-400/10 px-1 text-cyan-200">
+          data/pm-snapshot.json
+        </code>
+        .
       </p>
     </div>
   );
