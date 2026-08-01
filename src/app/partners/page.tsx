@@ -107,6 +107,32 @@ export default function PartnersPage() {
         </Link>
         .
       </p>
+
+      <section className="mt-12 border-t border-cyan-400/10 pt-6">
+        <h2 className="jarvis-metric-label">Credits</h2>
+        <p className="mt-2 max-w-2xl text-xs leading-relaxed text-slate-500">
+          Site atmosphere includes{" "}
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Holographic_Interface_by_beeple.jpg"
+            className="holo-text-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            &ldquo;Holographic Interface&rdquo;
+          </a>{" "}
+          by beeple (Mike Winkelmann), licensed under{" "}
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            className="holo-text-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CC BY 4.0
+          </a>
+          , via Wikimedia Commons. Additional ambient textures from Unsplash (Salvus,
+          Adi Goldstein).
+        </p>
+      </section>
     </div>
   );
 }
