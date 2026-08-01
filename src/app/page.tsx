@@ -109,8 +109,8 @@ export default function HomePage() {
           </p>
           <p>
             Week by week, the cohort builds infrastructure it will actually use. The PM
-            contest produced Forth as the operating winner, while builders like Joshua
-            Scotland (@raven-dubgub) continue to ship parallel production stacks (PM,
+            contest produced Forth as the operating winner, while builders like Inquiline
+            (@raven-dubgub) continue to ship parallel production stacks (PM,
             Comms, Showcase) designed for unification. Every profile on this site links
             outward to that evidence. If a student opts out of public marketing, their
             page shows a respectful private placeholder — default enrollment is opt-in.

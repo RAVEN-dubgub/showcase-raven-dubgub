@@ -1,3 +1,4 @@
+/** Fixed ambient chrome: large centered holoframe behind page content. */
 export function HolographicBackground() {
   return (
     <div className="holo-bg-root" aria-hidden="true">
