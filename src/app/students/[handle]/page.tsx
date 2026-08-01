@@ -157,8 +157,9 @@ export default async function StudentProfilePage({ params }: Props) {
         >
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Request intro</h2>
           <p className="mt-2 text-sm text-[var(--ink-soft)]">
-            Placement lead receives this within about a minute when SMTP is configured;
-            otherwise it is queued in the showcase database.
+            Placement lead is emailed within about a minute when Resend or SMTP is
+            configured; you also get a short confirmation. Otherwise it is queued in the
+            showcase database.
           </p>
           <div className="mt-4">
             <IntroForm defaultStudents={p.handle} />

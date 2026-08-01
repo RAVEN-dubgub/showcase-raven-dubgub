@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import {
   getAllParticipants,
   getOptOutHandles,
+  getRosterMeta,
   githubAvatar,
 } from "@/lib/roster";
+import { deployEvidence } from "@/lib/work";
 
 export const metadata: Metadata = {
   title: "Students",
@@ -34,13 +36,26 @@ export default async function StudentsPage({
   const skillSet = Array.from(
     new Set(all.flatMap((p) => p.skills.map((s) => s)))
   ).sort();
+  const rosterUpdated = getRosterMeta().updatedAt;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <h1 className="font-[family-name:var(--font-display)] text-4xl">Students</h1>
       <p className="mt-3 max-w-2xl text-[var(--ink-soft)]">
         {all.length} public profile pages from submission + PR evidence. Opt-outs show as
-        private. Filter by skill or search handles.
+        private. Filter by skill or search handles. Prefer the{" "}
+        <Link href="/work" className="font-semibold text-[var(--magenta)] hover:underline">
+          work index
+        </Link>{" "}
+        for a single week · project · live URL table.
+      </p>
+      <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] text-[var(--ink-soft)]">
+        Roster evidence as of{" "}
+        {new Date(rosterUpdated).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })}
       </p>
 
       <form className="mt-6 flex flex-wrap gap-3" method="get">
@@ -102,6 +117,17 @@ export default async function StudentsPage({
               {!isPrivate && (
                 <>
                   <p className="mt-3 line-clamp-2 text-sm text-[var(--ink-soft)]">{p.bio}</p>
+                  {(() => {
+                    const deploys = deployEvidence(p);
+                    return deploys.count > 0 ? (
+                      <p className="mt-2 text-xs font-semibold text-[var(--sage)]">
+                        {deploys.count} live deploy{deploys.count === 1 ? "" : "s"} ·{" "}
+                        {deploys.labels.join(" · ")}
+                      </p>
+                    ) : (
+                      <p className="mt-2 text-xs text-[var(--ink-soft)]">No public deploy URL yet</p>
+                    );
+                  })()}
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {p.skills.slice(0, 4).map((s) => (
                       <span

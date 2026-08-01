@@ -31,8 +31,14 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/students"
+                href="/work"
                 className="rounded-full bg-[var(--magenta)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--magenta-dark)]"
+              >
+                Work index
+              </Link>
+              <Link
+                href="/students"
+                className="rounded-full border border-[var(--ink)]/20 bg-white/70 px-5 py-2.5 text-sm font-semibold hover:border-[var(--magenta)]"
               >
                 Browse students
               </Link>
@@ -66,6 +72,11 @@ export default function HomePage() {
                 <a className="underline decoration-[var(--magenta)]/40" href={siteConfig.commsUrl} target="_blank" rel="noreferrer">
                   comms-raven-dubgub
                 </a>
+              </li>
+              <li>
+                <Link href="/work" className="font-semibold text-[var(--magenta)] hover:underline">
+                  Week · project · live URL table →
+                </Link>
               </li>
               <li>
                 <Link href="/status" className="font-semibold text-[var(--magenta)] hover:underline">

@@ -5,11 +5,13 @@ import { FormEvent, useState } from "react";
 export function RsvpForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
   const [error, setError] = useState("");
+  const [notified, setNotified] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setError("");
+    setNotified(false);
     const form = new FormData(e.currentTarget);
     try {
       const res = await fetch("/api/rsvp", {
@@ -19,6 +21,7 @@ export function RsvpForm() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "RSVP failed");
+      setNotified(Boolean(data.notified));
       setStatus("ok");
       e.currentTarget.reset();
     } catch (err) {
@@ -72,7 +75,11 @@ export function RsvpForm() {
         {status === "loading" ? "Saving…" : "RSVP for showcase"}
       </button>
       {status === "ok" && (
-        <p className="text-sm font-medium text-[var(--sage)]">You&apos;re on the list.</p>
+        <p className="text-sm font-medium text-[var(--sage)]">
+          {notified
+            ? "You\u2019re on the list — confirmation email sent."
+            : "You\u2019re on the list — we saved your RSVP."}
+        </p>
       )}
       {status === "err" && (
         <p className="text-sm font-medium text-[var(--magenta)]">{error}</p>

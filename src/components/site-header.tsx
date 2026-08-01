@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 const links = [
   { href: "/students", label: "Students" },
+  { href: "/work", label: "Work index" },
   { href: "/status", label: "PM status" },
   { href: "/partners", label: "Partners" },
   { href: "/event", label: "Showcase RSVP" },

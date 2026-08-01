@@ -14,11 +14,12 @@ We produce developers you can evaluate entirely on GitHub — every review, ever
 
 ## What you can do on this site
 
-1. **Browse students** at `/students` — name, campus, bio, skills, GitHub avatar.
-2. **Open evidence** — GitHub profile + PM / Comms / Showcase deploy URLs when shipped.
-3. **Check cohort status** at `/status` — read-only PM snapshot + live enrolled counts (not marketing fluff).
-4. **Request an intro** at `/partners#request-intro` or on any public profile — placement lead notified.
-5. **RSVP** for the end-of-pilot showcase at `/event`.
+1. **Scan the work index** at `/work` — one table of week · project · live URL (output velocity without opening every card).
+2. **Browse students** at `/students` — name, campus, bio, skills, GitHub avatar + deploy counts.
+3. **Open evidence** — GitHub profile + PM / Comms / Showcase deploy URLs when shipped.
+4. **Check cohort status** at `/status` — read-only PM snapshot + live enrolled counts (not marketing fluff).
+5. **Request an intro** at `/partners#request-intro` or on any public profile — placement lead + partner confirmation email when configured.
+6. **RSVP** for the end-of-pilot showcase at `/event`.
 
 ---
 

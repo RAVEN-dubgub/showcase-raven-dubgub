@@ -22,5 +22,5 @@ Placement / ops email convention matches PM/Comms: `wolfscotland@gmail.com` unle
 ## Do not
 
 - Hardcode fake PM status (lorem) — refresh `data/pm-snapshot.json`
-- Expose SMTP credentials
+- Expose Resend / SMTP credentials
 - Drop privacy opt-out behavior

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/db";
-import { notifyPlacementLead } from "@/lib/mail";
+import { notifyIntro } from "@/lib/mail";
 
 const schema = z.object({
   partnerName: z.string().min(1).max(120),
@@ -16,8 +16,11 @@ export async function POST(req: Request) {
     const body = schema.parse(await req.json());
     const row = await prisma.introRequest.create({ data: body });
     let notified = false;
+    let confirmed = false;
     try {
-      notified = await notifyPlacementLead(body);
+      const result = await notifyIntro(body);
+      notified = result.lead;
+      confirmed = result.confirm;
       if (notified) {
         await prisma.introRequest.update({
           where: { id: row.id },
@@ -27,7 +30,7 @@ export async function POST(req: Request) {
     } catch (err) {
       console.error("[intro] notify failed", err);
     }
-    return NextResponse.json({ ok: true, id: row.id, notified });
+    return NextResponse.json({ ok: true, id: row.id, notified, confirmed });
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: err.issues[0]?.message ?? "Invalid" }, { status: 400 });

@@ -15,7 +15,8 @@ Public vibe-marketing / hiring-partner showcase for the **Hult Cohort Developer 
 | Portfolio links | PM / Comms / Showcase repos + deploy URLs from roster |
 | PM integration | `/status` + `/api/pm-status` snapshot + live cohort stats |
 | Partners page | `/partners` — hire path, fee model, contact |
-| Request intro | Form → Postgres + optional SMTP to placement lead |
+| Work index | `/work` — week · project · live URL table for hiring partners |
+| Request intro | Form → Postgres + Resend/SMTP to placement lead + partner confirmation |
 | Privacy | Default opt-in; `/api/privacy` opt-out → private placeholder |
 | SEO | titles, descriptions, Open Graph, sitemap, robots |
 | Event RSVP | `/event` |
@@ -44,3 +45,8 @@ npm run dev
 ## Agent notes
 
 See [AGENTS.md](./AGENTS.md).
+
+## Email (production)
+
+Set `RESEND_API_KEY` (+ optional `EMAIL_FROM`) on Vercel, or SMTP_* fallback.
+Details: [DEPLOY.md](./DEPLOY.md) §4.

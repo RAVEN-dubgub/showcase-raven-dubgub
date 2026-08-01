@@ -21,12 +21,16 @@ export async function POST(req: Request) {
         role: body.role || null,
       },
     });
+    let notified = false;
+    let confirmed = false;
     try {
-      await notifyRsvp(body);
+      const result = await notifyRsvp(body);
+      notified = result.lead;
+      confirmed = result.confirm;
     } catch (err) {
       console.error("[rsvp] notify failed", err);
     }
-    return NextResponse.json({ ok: true, id: row.id });
+    return NextResponse.json({ ok: true, id: row.id, notified, confirmed });
   } catch (err) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: err.issues[0]?.message ?? "Invalid" }, { status: 400 });

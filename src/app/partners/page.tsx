@@ -82,8 +82,9 @@ export default function PartnersPage() {
       >
         <h2 className="font-[family-name:var(--font-display)] text-2xl">Request an intro</h2>
         <p className="mt-2 max-w-2xl text-sm text-[var(--ink-soft)]">
-          Tell us who you want to meet. We notify the placement lead immediately (SMTP) or
-          queue the request in Postgres for follow-up within the SLA.
+          Tell us who you want to meet. We email the placement lead and send you a short
+          confirmation when notifications are configured; otherwise the request is queued in
+          Postgres for follow-up within the SLA.
         </p>
         <div className="mt-5 max-w-xl">
           <IntroForm />

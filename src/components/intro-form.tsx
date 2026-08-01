@@ -9,11 +9,13 @@ type Props = {
 export function IntroForm({ defaultStudents = "" }: Props) {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
   const [error, setError] = useState("");
+  const [notified, setNotified] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setError("");
+    setNotified(false);
     const form = new FormData(e.currentTarget);
     const body = Object.fromEntries(form.entries());
     try {
@@ -24,6 +26,7 @@ export function IntroForm({ defaultStudents = "" }: Props) {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Request failed");
+      setNotified(Boolean(data.notified));
       setStatus("ok");
       e.currentTarget.reset();
     } catch (err) {
@@ -90,7 +93,9 @@ export function IntroForm({ defaultStudents = "" }: Props) {
       </button>
       {status === "ok" && (
         <p className="text-sm font-medium text-[var(--sage)]">
-          Received — placement lead notified. Expect acknowledgment within 24 hours.
+          {notified
+            ? "Received — placement lead notified by email. Check your inbox for confirmation."
+            : "Received and saved — we will follow up within 24 hours."}
         </p>
       )}
       {status === "err" && (
