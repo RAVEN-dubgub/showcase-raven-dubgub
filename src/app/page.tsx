@@ -33,14 +33,6 @@ export default function HomePage() {
             </div>
           </div>
           <aside className="flex flex-col items-center gap-6 lg:items-stretch">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/holoframe.png"
-              alt="Holographic frame mark"
-              width={320}
-              height={320}
-              className="holo-hero-frame"
-            />
             <div className="jarvis-panel w-full p-5">
               <p className="jarvis-metric-label relative z-[1]">Live signal</p>
               <ul className="relative z-[1] mt-4 space-y-3 text-sm text-slate-300">

@@ -1,10 +1,10 @@
 # Web hologram stock (Hult Project 3 / PM cyan HUD)
 
-Royalty-free candidates downloaded for `showcase-raven-dubgub` backgrounds and accents.  
-Does **not** replace `public/holoframe.png` (personal centered mark).
+Royalty-free candidates downloaded for `showcase-raven-dubgub` backgrounds and accents.
 
-**Preview deploy (branch `preview/holoframe-bg-center`):** ambient layers use  
-`web-holo-08` (Beeple, CC BY — footer credit), `web-holo-02`, and `web-holo-05` only.
+**Active ambient layers (branch `preview/holoframe-bg-center`):**  
+`web-holo-08` (Beeple, CC BY — footer credit), `web-holo-02`, and `web-holo-05` only.  
+Personal `/holoframe.png` cube mark is **not** used on the site.
 
 ## License summary
 

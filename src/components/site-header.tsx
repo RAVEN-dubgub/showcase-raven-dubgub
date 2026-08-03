@@ -19,14 +19,6 @@ export function SiteHeader() {
     <header className="holo-header">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/holoframe.png"
-            alt=""
-            width={32}
-            height={32}
-            className="holo-mark"
-          />
           <span className="flex flex-col leading-tight">
             <span className="holo-brand text-base tracking-tight sm:text-lg">
               {siteConfig.name}
