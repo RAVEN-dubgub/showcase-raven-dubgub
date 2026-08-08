@@ -4,8 +4,8 @@
   "commsPlatformUrl": "https://comms-raven-dubgub.vercel.app",
   "forthWinnerUrl": "https://forth-bice.vercel.app",
   "cohortPlatformUrl": "https://site-nine-rouge-68.vercel.app",
-  "updatedAt": "2026-07-30T13:00:00.000Z",
-  "note": "Static daily snapshot for hiring-partner read-only status. Live cohort counts refresh from /api/cohort/stats when available.",
+  "updatedAt": "2026-08-08T20:00:00.000Z",
+  "note": "Static daily snapshot for hiring-partner read-only status. Live cohort counts refresh from /api/cohort/stats when available. Re-run scripts/refresh-pm-snapshot.mjs to bump this file.",
   "projects": [
     {
       "slug": "phase-1-project-1",
@@ -18,14 +18,14 @@
       "slug": "phase-1-project-2",
       "title": "Internal communications platform",
       "status": "Review / vote window — production deploys live",
-      "submissionsWithDeploy": 15,
+      "submissionsWithDeploy": 18,
       "sampleUrl": "https://comms-raven-dubgub.vercel.app"
     },
     {
       "slug": "phase-1-project-3",
       "title": "Vibe marketing / public showcase",
-      "status": "Submission window open through Sun 17:00 ET",
-      "submissionsWithDeploy": 1,
+      "status": "Review / vote window — W3 showcase deploys live",
+      "submissionsWithDeploy": 3,
       "sampleUrl": "https://showcase-raven-dubgub.vercel.app"
     }
   ],

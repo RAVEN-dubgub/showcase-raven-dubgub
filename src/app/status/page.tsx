@@ -149,11 +149,15 @@ export default async function StatusPage() {
         <Link href="/api/pm-status" className="font-semibold holo-text-link">
           /api/pm-status
         </Link>
-        . Refresh snapshot daily via{" "}
+        . Static snapshot in{" "}
         <code className="rounded bg-cyan-400/10 px-1 text-cyan-200">
           data/pm-snapshot.json
-        </code>
-        .
+        </code>{" "}
+        — refresh with{" "}
+        <code className="rounded bg-cyan-400/10 px-1 text-cyan-200">
+          node scripts/refresh-pm-snapshot.mjs
+        </code>{" "}
+        before deploy or on a daily cron. Live cohort counts above revalidate hourly.
       </p>
     </div>
   );
